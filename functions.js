@@ -3,17 +3,69 @@
 // let x = myFunction(4,3);
 // console.log(`X = ${x}`);
 
-(function (){
-    let x = "Hello!!";
-    console.log(x);
-})();
+// (function (){
+//     let x = "Hello!!";
+//     console.log(x);
+// })();
 
-function myFunction(a,b){
-    return arguments.length;
+// function myFunction(a,b){
+//     return arguments.length;
+// }
+
+// const result = function(a,b){return a+b};
+
+// let z = result(5,10);
+
+// console.log(`Result = ${z}`);
+
+// function toCelsius(fahrenheit) {
+//     return (5/9) * (fahrenheit-32);
+// }
+
+// let x = toCelsius(77);
+// let text = "The temperature is " + x + " Celsius";
+// console.log(text);
+
+
+
+myFunction();
+function myFunction(){
+    console.log("Hello");
 }
 
-const result = function(a,b){return a+b};
+a();
+let a = function(){console.log("Hello World");}
 
-let z = result(5,10);
+// JavaScript Hoisting
 
-console.log(`Result = ${z}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
