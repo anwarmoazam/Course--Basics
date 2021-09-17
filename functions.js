@@ -30,11 +30,26 @@
 
 myFunction();
 function myFunction(){
-    console.log("Hello");
+    console.log(a);
+    {
+        var a = 1;
+        let b = 5;
+    }
+    console.log(a);
+    console.log(b);
 }
 
-a();
-let a = function(){console.log("Hello World");}
+// var has functional scope
+// let and const have block scope
+
+
+
+
+
+
+
+// a();
+// let a = function(){console.log("Hello World");}
 
 // JavaScript Hoisting
 
