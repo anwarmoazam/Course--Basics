@@ -33,25 +33,15 @@ const arrMapped = arr.map((element,index,array)=>{
     return element*element;
 })
 
-<<<<<<< HEAD
 console.log(arr);
 
 console.log(arrMapped);
-=======
-// Map, Filter and Reduce in JavaScript
-
-let arr = [1,2,3,4,5,6,7,5,4,4,2,2,1,3,85];
->>>>>>> 06342fee5b7aa3d9d3dac828943f191a1aec7658
 
 const arrFiltered = arr.filter((element)=>{
     return element>4;
 })
 
-<<<<<<< HEAD
 console.log(arrFiltered);
-=======
-let arr1 = arr.map(x => x+2).reverse();
->>>>>>> 06342fee5b7aa3d9d3dac828943f191a1aec7658
 
 const arrReduced = arr.reduce((element,nextElement)=>{
     let temp = element;
@@ -61,19 +51,7 @@ const arrReduced = arr.reduce((element,nextElement)=>{
     return temp;
 })
 
-<<<<<<< HEAD
 console.log(`Large number of array is : ${arrReduced}`);
-=======
-console.log(arr1);
-
-let ages = [1,2,3,4,5,15,55,22,14,36,30,21,31,9,10];
-
-console.log(ages);
-console.log(ages.map(x=>x*x));
-// let adult = ages.filter(checkAdult);
-// console.log(ages);
-// console.log(adult);
->>>>>>> 06342fee5b7aa3d9d3dac828943f191a1aec7658
 
 
 function checkAdult(age){
