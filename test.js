@@ -48,19 +48,18 @@ let names = ["Mohammad Ibrahim","Anwar Moazam","Mohammad Uzair","Sahil Khan"];
 // for(let i=1;i<names.length;i=i+2){
 //     console.log(`Hi ${names[i]}`);
 //     console.log(`Hi ${names[i-1]}`);
-
 // }
 
 
-function makeArray(num){
-    let newArray = [];
-    for(let i=1;i<=num;i++){
-        newArray.push(i);
-    }
-    return newArray;
-}
+// function makeArray(num){
+//     let newArray = [];
+//     for(let i=1;i<=num;i++){
+//         newArray.push(i);
+//     }
+//     return newArray;
+// }
 
-console.log(makeArray(100));
+// console.log(makeArray(100));
 
 // function sumOddEven(){
 //     let sumEven = 0;
@@ -143,8 +142,6 @@ function sumOddEven(num1,num2){
             sumOdd += i;
         }
     }
-    // console.log(`Sum of Even no. from ${startNum} to ${endNum} is : ${sumEven}`);
-    // console.log(`Sum of Odd no. from ${startNum} to ${endNum} is : ${sumOdd}`);    
     return [sumEven,sumOdd];
 }
 
@@ -164,21 +161,3 @@ console.log(result(5,50,70,100));
 
 // 5-50 (Even sum, Odd Sum)
 // 70-100 (Even sum, Odd Sum)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
