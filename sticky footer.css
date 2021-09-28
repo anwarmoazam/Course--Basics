@@ -1,0 +1,18 @@
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: cadetblue;
+    height: 40px;
+    width: auto;
+    text-align: center;
+}
+
+
+
+.para {
+    border: solid 1px red;
+    margin: 0px 50px;
+    line-height: 30px;
+    text-align: justify;
+    height: calc(100% - 500px);
+}

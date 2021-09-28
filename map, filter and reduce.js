@@ -120,7 +120,7 @@ console.log(sameAge);
 
 function ageLessThan30(acc,curr){
     if(curr.age<30){
-        acc.push(curr.firstname+ " " +curr.lastname);
+        acc.push(curr.firstname);
     }
     return acc;
 }
