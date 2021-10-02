@@ -1,0 +1,124 @@
+body{
+    margin: 0px;
+}
+
+.header {
+    margin: 0px;
+    display: flex;
+    color: white;
+    background-color: #343a40;
+    justify-content: space-between;
+}
+
+.htext {
+    margin-left: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dropdown {
+    margin-right: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.data {
+    margin: 0px 100px;
+}
+
+.shead {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mainaction {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+}
+
+.secaction {
+    background-color: #6c757d;
+    border-radius: .25rem;
+    color: white;
+    border: none;
+}
+
+.container {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+}
+
+.bottom>p {
+
+}
+
+.btns {
+    display: flex;
+}
+
+.footer {
+    
+}
+
+.tooltip {
+    position: relative;
+    height: 60px;
+    width: 250px;
+    background: #f2395a;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    display: inline-block;
+}
+
+.tooltip::before {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    width: 200px;
+    padding: 10px;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    border-radius: 5px;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    content: "This is a Tooltip";
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.tooltip::after {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    content: "";
+    bottom: 100%;
+    left: 50%;
+    border-top-color: white;
+    border-bottom-width: 0;
+    transform: translateX(-50%);
+}

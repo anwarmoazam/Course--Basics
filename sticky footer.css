@@ -1,18 +1,38 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.para>h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
 footer {
     position: fixed;
-    bottom: 0px;
+    /* bottom: 0px; */
     background-color: cadetblue;
-    height: 40px;
-    width: auto;
+    /* height: 40px; */
+    /* width: 100%; */
+    /* right: 0; */
+    left: 0;
+    /* top: 0; */
+    bottom: 0;
+    /* width: 100%; */
     text-align: center;
 }
 
-
-
 .para {
     border: solid 1px red;
-    margin: 0px 50px;
+    /* margin: 0px 50px; */
+    margin-bottom: 50px;
     line-height: 30px;
     text-align: justify;
-    height: calc(100% - 500px);
+    /* height: calc(100% - 500px); */
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
