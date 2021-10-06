@@ -4,6 +4,7 @@
     padding: 10px;
 }
 
+<<<<<<< HEAD
 th:first-child {
     width: 100px;
     height: 60px;
@@ -27,4 +28,23 @@ tr {
 
 .hide {
     display: none;
+=======
+
+
+th:first-child {
+    width: 100px;
+    height: 70px;
+}
+
+
+th {
+    background-color: grey;
+    color: black;
+    width: 300px;
+}
+
+td {
+    text-align: center;
+    height: 50px;
+>>>>>>> cfb9bd9aeb7d70b712d37035715761ff1575328b
 }
