@@ -36,4 +36,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
   fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(json => {
+    for(let i=0; i<json.length; i++){
+    // console.log(json[i]);
+    var a = Object.entries(json[i]);
+    }
+    console.log(a[0]);
+  })
