@@ -32,3 +32,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
     `</tr></thead></table>`;
 	tableDOM.innerHTML = tableHead + tableData;
   })
+
+
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => console.log(json))
