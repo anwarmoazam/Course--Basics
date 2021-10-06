@@ -284,6 +284,8 @@ function newTwoSum(arr, target) {
 
 // console.log(newTwoSum([2, 7, 11, 15], 9));
 
+
+
 /*Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
@@ -303,18 +305,18 @@ Output: [] */
 function tripletsChk(arr) {
 	let output = [];
 	for (let i = 0; i < arr.length; i++) {
-        // console.log(`I : ${arr[i]}`);
+		// console.log(`I : ${arr[i]}`);
 		for (let j = i + 1; j < arr.length; j++) {
-            // console.log(`J : ${arr[j]}`);
+			// console.log(`J : ${arr[j]}`);
 			for (let k = j + 1; k < arr.length; k++) {
-                // console.log(`I : ${arr[i]}`);
-                // console.log(`J : ${arr[j]}`);
-                // console.log(`K : ${arr[k]}`);
+				// console.log(`I : ${arr[i]}`);
+				// console.log(`J : ${arr[j]}`);
+				// console.log(`K : ${arr[k]}`);
 				if (arr[i] !== arr[j] && arr[i] !== arr[k] && arr[j] !== arr[k] && arr[i] + arr[j] + arr[k] === 0) {
-					console.log(arr[i],arr[j],arr[k]);
-                    output.push([arr[i],arr[j],arr[k]]);
-                    // output.push([arr[j]);
-                    // output.push(arr[k]);
+					console.log(arr[i], arr[j], arr[k]);
+					output.push([arr[i], arr[j], arr[k]]);
+					// output.push([arr[j]);
+					// output.push(arr[k]);
 					// console.log(arr[i],arr[j],arr[k]);
 				}
 			}
@@ -323,7 +325,129 @@ function tripletsChk(arr) {
 	return output;
 }
 
-console.log(tripletsChk([-1,0,1,2,-1,-4]));
+console.log(tripletsChk([-1, 0, 1, 2, -1, -4]));
 console.log(tripletsChk([]));
 console.log(tripletsChk([0]));
+
+function twoSum(num1, num2 = 100) {
+	console.log(arguments);
+	console.log(arguments.length);
+	return num1 + num2;
+}
+
+console.log(twoSum(2, 28));
+
+function getMatrix(row, column, value) {
+	let matrix = [];
+	for (let i = 0; i < row; i++) {
+		let inner = [];
+		for (let j = 0; j < column; j++) {
+			inner.push([value]);
+		}
+		matrix.push(inner);
+	}
+	return matrix;
+}
+
+console.log(getMatrix(3, 3, 0));
+
+/*
+[
+	[0,0,0]
+	[0,0,0]
+]
+*/
+
+
+function printStar(value){
+	let pattern = '';
+	for(let i=0; i<value; i++){
+		for(let j=0; j<=i; j++){
+			pattern += '*';
+		}
+		pattern += '\n';
+	}
+	console.log(pattern);
+}
+
+// printStar(5);
+
+function printSquare(value){
+	let pattern = '';
+	for(let i=0; i<value; i++){
+		for(let j=0; j<value; j++){
+			pattern += '*';
+		}
+		pattern += '<br>';
+	}
+	document.write(pattern);
+}
+
+// console.log(printStar(2));
+
+function printNewPattern(value){
+	let pattern = '';
+	for(let i=1; i<=value; i++){
+		for(let j=1; j<=value; j++){
+			if(i>1 && i<value && j>1 && j<value){
+				pattern += ' ';
+			} else {
+				pattern += '*';
+			}
+		}
+		pattern += '\n';
+	}
+	// document.write(pattern);
+	console.log(pattern);
+}
+
+// printNewPattern(4);
+
+
+function printLastPattern(value){
+	let pattern = '';
+	for(let i=1; i<=value; i++){
+		for(let j=value; j>=1; j--){
+			if(j<=i){
+				pattern += '*';
+			} else {
+				pattern += ' ';
+			}
+		}
+		pattern += '\n';
+	}
+	console.log(pattern);
+}
+
+// printLastPattern(4);
+
+function printPattern5(value){
+	let text = '';
+	for(let i=1;i<=value;i++){
+		for(let j=value; j>=i; j--){
+			text += '*';
+		}
+		text += '\n';
+	}
+	console.log(text);																																																																																																																																																																															
+}
+
+// printPattern5(10);
+
+function printPattern6(value){
+	let text = '';
+	for(let i=1;i<=value;i++){
+		for(let j=1; j<=i; j++){
+			if(j>1 && j<i && i!==value){
+				text += ' ';
+			} else{
+				text += '*';
+			}
+		}
+		text += '\n';
+	}
+	console.log(text);																																																																																																																																																																															
+}
+
+printPattern6(5);
 
