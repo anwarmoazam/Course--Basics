@@ -284,8 +284,6 @@ function newTwoSum(arr, target) {
 
 // console.log(newTwoSum([2, 7, 11, 15], 9));
 
-
-
 /*Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
@@ -358,11 +356,10 @@ console.log(getMatrix(3, 3, 0));
 ]
 */
 
-
-function printStar(value){
+function printStar(value) {
 	let pattern = '';
-	for(let i=0; i<value; i++){
-		for(let j=0; j<=i; j++){
+	for (let i = 0; i < value; i++) {
+		for (let j = 0; j <= i; j++) {
 			pattern += '*';
 		}
 		pattern += '\n';
@@ -372,10 +369,10 @@ function printStar(value){
 
 // printStar(5);
 
-function printSquare(value){
+function printSquare(value) {
 	let pattern = '';
-	for(let i=0; i<value; i++){
-		for(let j=0; j<value; j++){
+	for (let i = 0; i < value; i++) {
+		for (let j = 0; j < value; j++) {
 			pattern += '*';
 		}
 		pattern += '<br>';
@@ -385,11 +382,11 @@ function printSquare(value){
 
 // console.log(printStar(2));
 
-function printNewPattern(value){
+function printNewPattern(value) {
 	let pattern = '';
-	for(let i=1; i<=value; i++){
-		for(let j=1; j<=value; j++){
-			if(i>1 && i<value && j>1 && j<value){
+	for (let i = 1; i <= value; i++) {
+		for (let j = 1; j <= value; j++) {
+			if (i > 1 && i < value && j > 1 && j < value) {
 				pattern += ' ';
 			} else {
 				pattern += '*';
@@ -403,12 +400,11 @@ function printNewPattern(value){
 
 // printNewPattern(4);
 
-
-function printLastPattern(value){
+function printLastPattern(value) {
 	let pattern = '';
-	for(let i=1; i<=value; i++){
-		for(let j=value; j>=1; j--){
-			if(j<=i){
+	for (let i = 1; i <= value; i++) {
+		for (let j = value; j >= 1; j--) {
+			if (j <= i) {
 				pattern += '*';
 			} else {
 				pattern += ' ';
@@ -421,33 +417,304 @@ function printLastPattern(value){
 
 // printLastPattern(4);
 
-function printPattern5(value){
+function printPattern5(value) {
 	let text = '';
-	for(let i=1;i<=value;i++){
-		for(let j=value; j>=i; j--){
+	for (let i = 1; i <= value; i++) {
+		for (let j = value; j >= i; j--) {
 			text += '*';
 		}
 		text += '\n';
 	}
-	console.log(text);																																																																																																																																																																															
+	console.log(text);
 }
 
 // printPattern5(10);
 
-function printPattern6(value){
+function printPattern6(value) {
 	let text = '';
-	for(let i=1;i<=value;i++){
-		for(let j=1; j<=i; j++){
-			if(j>1 && j<i && i!==value){
+	for (let i = 1; i <= value; i++) {
+		for (let j = 1; j <= i; j++) {
+			if (j > 1 && j < i && i !== value) {
 				text += ' ';
-			} else{
+			} else {
 				text += '*';
 			}
 		}
 		text += '\n';
 	}
-	console.log(text);																																																																																																																																																																															
+	console.log(text);
 }
 
 printPattern6(5);
+
+// Create a function that concatenates n input arrays, where n is variable.
+//     Examples
+//     concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+//     concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+//     concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+//     concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+
+function concateArrays(n) {
+	let result = [];
+	for (let i = 0; i < arguments.length; i++) {
+		for (let j = 0; j < arguments[i].length; j++) {
+			result.push(arguments[i][j]);
+		}
+	}
+	return result;
+}
+
+// console.log(concateArrays([1, 2, 3], [4, 5], [6, 7]));
+// console.log(concateArrays([1], [2], [3], [4], [5], [6], [7]));
+// console.log(concateArrays([1, 2], [3, 4]));
+// console.log(concateArrays([4, 4, 4, 4, 4]));
+
+/*
+
+Find k numbers with most occurrences in the given array
+
+Given an array of n numbers and a positive integer k. The problem is to find k numbers with most occurrences, i.e., the top k numbers having the maximum frequency. If two numbers have the same frequency then the larger number should be given preference. The numbers should be displayed in decreasing order of their frequencies. It is assumed that the array consists of k numbers with most occurrences.
+
+Examples:
+
+1 ==> 
+    Input: 
+      arr[] = {3, 1, 4, 4, 5, 2, 6, 1}, 
+      k = 2
+    
+    Output: 4 1
+    
+    Explanation:
+      Frequency of 4 = 2
+      Frequency of 1 = 2
+      These two have the maximum frequency and 4 is larger than 1.
+
+2 ==>
+    Input : 
+       arr[] = {7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9},
+       k = 4
+    
+    Output: 5 11 7 10
+
+    Explanation: 
+      Frequency of 5 = 3
+      Frequency of 11 = 2
+      Frequency of 7 = 2
+      Frequency of 10 = 1
+      These four have the maximum frequency and 5 is largest among rest.
+
+	  */
+
+// 1. loop on array
+// 2. check first element with next element that same or not
+// 3. if duplicate element found then push it into empty array
+
+function repeatNumber(arr, k) {
+	let output = [];
+	let result = arr.reduce((acc, curr) => {
+		if (acc[curr]) {
+			acc[curr] = ++acc[curr];
+		} else {
+			acc[curr] = 1;
+		}
+		return acc;
+	}, {});
+	console.log(result);
+	let sortArr = Object.keys(result)
+	.sort((a,b) => result[b]-result[a])
+	console.log(sortArr);
+
+	for(let i=0; i<k; i++){
+		output.push(Number(sortArr[i]))
+	}
+	return output;
+}
+
+function print_N_mostFrequentNumber(arr, k) {
+    let mp = {};
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] in mp == false){
+            mp[arr[i]] = 0;
+        }
+	        mp[arr[i]] = mp[arr[i]] + 1;
+    }
+
+    const map = new Map(Object.entries(mp));
+    let queue = [...map];
+	// console.log(queue);
+    queue.sort(function (a, b) {
+        if (a[1] == b[1]) {
+            return b[0] - a[0];
+        }
+        else {
+            return b[1] - a[1];
+        }
+    });
+	console.log(queue);
+
+    let result = [];
+    for(let i=0;i<k;i++){
+        result.push(queue[i][0]);
+    }
+    return result;
+}
+
+
+console.log(print_N_mostFrequentNumber([7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9], 4));
+
+
+// console.log(repeatNumber([7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9], 4));
+// Output (Should be) : 5 11 7 10
+
+// console.log(repeatNumber([3, 1, 4, 4, 5, 2, 6, 1], 2));
+// Output (Should be) : 4 1
+
+
+/*
+ *********
+ *******
+ *****
+ ***
+ *
+ */
+function pattern8(value) {
+	let num = value;
+	let str = '';
+	for (let i = 0; i < value; i++) {
+		for (let k = 0; k < i; k++) {
+			str += ' ';
+		}
+		for (let j = 0; j < 2 * (num - i) - 1; j++) {
+			str += '*';
+		}
+		str += '\n';
+	}
+	return str;
+}
+
+// console.log(pattern8(10));
+
+function pattern2(a) {
+	let str = '';
+	for (let i = 0; i < a; i++) {
+		for (let j = 0; j < a; j++) {
+			if (i == 0 || i == a - 1 || j == 0 || j == a - 1) {
+				str += '*';
+			} else {
+				str += ' ';
+			}
+		}
+		str += '\n';
+	}
+	return str;
+}
+
+// console.log(pattern2(4));
+
+/*
+
+    *
+   ***
+  *****
+ *******
+*********
+
+*/
+
+function pattern7(value) {
+	let num = value;
+	let str = "";
+	for(let i=value; i>0; i--){
+		for(let k=0; k<i-1; k++){
+			str += " "
+		}
+		for(let j=0; j<2 * (num-i+1) -1; j++){
+			str += "*";
+		}
+		str += "\n";
+	}
+	return str;
+}
+
+// n=5
+// console.log(2 * (n-5+1) -1);
+// console.log(2 * (n-4+1) -1);
+// console.log(2 * (n-3+1) -1);
+// console.log(2 * (n-2+1) -1);
+// console.log(2 * (n-1+1) -1);
+
+// console.log(pattern7(5));
+/*
+    *
+   * *
+  *   *
+ *     *
+*********
+*/
+
+
+function pattern9(value) {
+	let num = value;
+	let str = "";
+	for(let i=value; i>0; i--){
+		for(let k=0; k<i; k++){
+			str += " ";
+		}
+		for(let j=0; j<2*(num-i+1)-1; j++) {
+			if(i == value || i==1 || j==0 || j == 2*(num-i+1)-2){
+				str += "*";
+			} else {
+				str += " ";
+			}
+		}
+		str += "\n";
+	}
+	return str;
+}
+
+// console.log(pattern9(10));
+
+/*
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+	* 
+*/
+
+
+// Example of Rest Operator
+function allTruthy(...other){
+
+	for(let i=0; i<other.length; i++){
+		if(other[i]==false){
+			return false;
+		}
+	}
+	console.log(other);
+	return true;
+}
+const result = allTruthy(true,true,true,true,2);
+console.log(result);
+
+
+
+// Example of Spread and Rest Operator
+var names1 = ["Anwar","Uzair","Aaliya","Aadil"];
+
+function getNames(...myNames){
+	let allNames = "";
+	for(let i=0; i<myNames.length; i++){
+		allNames += myNames[i]+"\n";
+	}
+	return allNames;
+}
+
+console.log(getNames(...names1));
+
 
