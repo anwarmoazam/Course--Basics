@@ -5,3 +5,22 @@
 .valid{
     border: 1px solid green;
 }
+
+.container{
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 200px;
+}
+
+label{
+    align-items: center;
+    /* margin-right: 100px; */
+}
+
+div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    /* text-align: center; */
+}

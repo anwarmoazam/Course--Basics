@@ -8,43 +8,57 @@
     <link rel="stylesheet" href="./practice.css">
 </head>
 <body>
-    <form action="" method="post">
-        <div id="username" class="color">
-            User Name : <input type="text" name="username">
-        </div>
-        <div id="password" class="color">
-            Password : <input type="text" name="password">
-        </div>
-        <div id="date">
-            Date : <input type="date" name="date">
-        </div>
-        <div id="email">
-            Email : <input type="email" name="email">
-        </div>
-        <div id="color">
-            Color : <input type="color" name="color">
-        </div>
-        <div id="gender">
-            Male : <input type="radio" name="gender" value="male">
-            Female : <input type="radio" name="gender" value='female'>
-        </div>
-        <div id="mobile">
-            Mobile : <input type="number" name="mobile">
-        </div>
-        <div id="phone">
-            Phone : <input type="text" name="phone">
-        </div>
-        <div id="text">
-            Enter Some text here : <textarea name="abx" rows="4" cols="50" maxlength="140"></textarea>
-            <span></span>
-        </div>
-        <div id="time">
-            Time : <input type="time" name="time">
-        </div>
-        <div id="submit">
-            <input type="button" value="Submit">
-        </div>
-    </form>
+    <div class="container">
+        <form action="" method="post">
+            <div id="username" class="color">
+                <label for="username">User Name :</label>
+                <input type="text" name="username">
+            </div>
+            <div id="password" class="color">
+                <label for="password">Password :</label>
+                <input type="text" name="password">
+            </div>
+            <div id="date" class="color">
+                <label for="date">Date :</label>
+                <input type="date" name="date">
+            </div>
+            <div id="email">
+                <label for="email">Email :</label>
+                <input type="email" name="email">
+            </div>
+            <div id="color">
+                <label for="color">Color :</label>
+                <input type="color" name="color">
+            </div>
+            <div id="gender">
+                <label for="gender">Gender :</label>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value='female'>
+            </div>
+            <div id="mobile">
+                <label for="mobile">Mobile :</label>
+                <input type="number" name="mobile">
+            </div>
+            <div id="phone">
+                <label for="phone">Phone :</label>
+                <input type="text" name="phone">
+            </div>
+            <div id="text">
+                <label for="text">Enter Some text here :</label>
+                <textarea name="abx" rows="4" cols="50" maxlength="140"></textarea>
+                <span></span>
+            </div>
+            <div id="time">
+                <label for="time">Time :</label>
+                <input type="time" name="time">
+            </div>
+            <div id="submit">
+                <input type="button" value="Submit">
+            </div>
+        </form>
+    </div>
     <script src="./practice.js"></script>
 </body>
 </html>

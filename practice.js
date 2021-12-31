@@ -4,8 +4,8 @@ let colorDOM = document.getElementById('color');
 let textDOM = document.getElementById('text');
 let timeDOM = document.getElementById('time');
 
-usernameDOM.children[0].addEventListener('keyup',function () {
-    let input = usernameDOM.children[0];
+usernameDOM.children[1].addEventListener('keyup',function () {
+    let input = usernameDOM.children[1];
     if(input.value.length<6 || input.value.length>40 || !/^[A-Za-z0-9]+$/.test(input.value)){
         usernameDOM.classList.add('invalid');
         usernameDOM.classList.remove('valid');
@@ -15,8 +15,8 @@ usernameDOM.children[0].addEventListener('keyup',function () {
     }
 })
 
-dateDOM.children[0].addEventListener('change',function(){
-    let selectedDate = new Date(dateDOM.children[0].value);
+dateDOM.children[1].addEventListener('change',function(){
+    let selectedDate = new Date(dateDOM.children[1].value);
     let now = new Date();
     selectedDate.setHours(0);
     selectedDate.setMinutes(0);
@@ -34,7 +34,7 @@ dateDOM.children[0].addEventListener('change',function(){
     }
 })
 
-colorDOM.children[0].addEventListener('input',function(e){
+colorDOM.children[1].addEventListener('input',function(e){
     let selectedColor = e.target.value; 
     let selectDOM = document.getElementsByClassName('color');
     for(let i=0; i<selectDOM.length; i++){
@@ -42,14 +42,14 @@ colorDOM.children[0].addEventListener('input',function(e){
     }
 })
 
-textDOM.children[1].innerText = 140;
+textDOM.children[2].innerText = 140;
 
-textDOM.children[0].addEventListener('keyup',function(e){
-    textDOM.children[1].innerText = 140-textDOM.children[0].value.length;
+textDOM.children[1].addEventListener('keyup',function(e){
+    textDOM.children[2].innerText = 140-textDOM.children[1].value.length;
 });
 
-timeDOM.children[0].addEventListener('input',function(){
-    let selectedTime = timeDOM.children[0].value;
+timeDOM.children[1].addEventListener('input',function(){
+    let selectedTime = timeDOM.children[1].value;
     let [selectedHours,selectedMinutes]=selectedTime.split(':');
     selectedMinutes = Number(selectedMinutes) + selectedHours*60;
     let nowTime = new Date();
